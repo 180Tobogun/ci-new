@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 02, 2018 at 03:43 PM
+-- Generation Time: Oct 02, 2018 at 04:01 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.1.12
 
@@ -46,7 +46,9 @@ INSERT INTO `ci_session` (`id`, `ip_address`, `user_agent`, `last_activity`, `da
 ('b1tfqu27u1pj6j0g3h2ccrb6qkl356s6', '127.0.0.1', NULL, 0, '__ci_last_regenerate|i:1538304795;usr_id|s:1:\"4\";usr_email|s:15:\"admin@gmail.com\";logged_in|b:1;', '0000-00-00 00:00:00'),
 ('5lnfetfioqbpsq7jm5gisb4c7oe6q5dk', '127.0.0.1', NULL, 0, '__ci_last_regenerate|i:1538466759;usr_id|s:1:\"4\";usr_email|s:15:\"admin@gmail.com\";logged_in|b:1;', '0000-00-00 00:00:00'),
 ('g3hjhnhgaqfg3d4vobttrli7932jtmov', '127.0.0.1', NULL, 0, '__ci_last_regenerate|i:1538482885;usr_id|s:1:\"4\";usr_email|s:15:\"admin@gmail.com\";logged_in|b:1;', '0000-00-00 00:00:00'),
-('ujvm9rdlr52kfft0v5mdivdenmi6rcih', '127.0.0.1', NULL, 0, '__ci_last_regenerate|i:1538482885;usr_id|s:1:\"4\";usr_email|s:15:\"admin@gmail.com\";logged_in|b:1;', '0000-00-00 00:00:00');
+('ujvm9rdlr52kfft0v5mdivdenmi6rcih', '127.0.0.1', NULL, 0, '__ci_last_regenerate|i:1538484827;usr_id|s:1:\"4\";usr_email|s:15:\"admin@gmail.com\";logged_in|b:1;', '0000-00-00 00:00:00'),
+('a80f40vbfqkh7i1veff49sirv92sm5hu', '127.0.0.1', NULL, 0, '__ci_last_regenerate|i:1538485157;usr_id|s:1:\"4\";usr_email|s:15:\"admin@gmail.com\";logged_in|b:1;', '0000-00-00 00:00:00'),
+('9chksun867eve1tuh0jdttobo3rmfsce', '127.0.0.1', NULL, 0, '__ci_last_regenerate|i:1538485157;usr_id|s:1:\"4\";usr_email|s:15:\"admin@gmail.com\";logged_in|b:1;', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -102,7 +104,7 @@ INSERT INTO `discussions` (`ds_id`, `id`, `ds_title`, `ds_body`, `ds_created_at`
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(25) NOT NULL,
-  `hash` varchar(255) NOT NULL,
+  `password` varchar(70) DEFAULT NULL,
   `email` varchar(125) NOT NULL,
   `role` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -111,7 +113,7 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `hash`, `email`, `role`) VALUES
+INSERT INTO `users` (`id`, `name`, `password`, `email`, `role`) VALUES
 (1, 'qwerwe', '7fdff6bfe8db9ace8889b0923d009a5db80cf127', 'werwer@gmail.com', 1),
 (2, 'qwerwe', '75d4cff7058d4b96200391c62f11c1a9bce5ff34', 'dasdasgadg@gmail.com', 1),
 (3, 'vbnvbn', 'fc6e017d92e34a08130c0de473adc92b538731e8', 'hvbnj@gsdfg.sdfg', 1),
