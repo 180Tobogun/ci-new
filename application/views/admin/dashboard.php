@@ -14,8 +14,8 @@
 		<?php foreach ($discussion_query->result() as $row) : ?>
 			<tr>
 				<td><?php echo $row->ds_id; ?></td>
-				<td><?php echo $row->usr_name; ?></td>
-				<td><?php echo $row->usr_email; ?></td>
+				<td><?php echo $row->name; ?></td>
+				<td><?php echo $row->email; ?></td>
 				<td><?php echo anchor('admin/update_item/ds/allow/' .
 							$row->ds_id, $this->lang->line('admin_dash_allow')) .
 						' ' . anchor('admin/update_item/ds/disallow/' .
@@ -53,8 +53,8 @@
 		<?php foreach ($comment_query->result() as $row) : ?>
 			<tr>
 				<td><?php echo $row->cm_id; ?></td>
-				<td><?php echo $row->usr_name; ?></td>
-				<td><?php echo $row->usr_email; ?></td>
+				<td><?php echo $row->name; ?></td>
+				<td><?php echo $row->email; ?></td>
 				<td><?php echo anchor('admin/update_item/cm/allow/' .
 							$row->cm_id, $this->lang->line('admin_dash_allow')) .
 						' ' . anchor('admin/update_item/cm/disallow/' .

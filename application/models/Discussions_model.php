@@ -74,7 +74,7 @@ class Discussions_model extends CI_Model
                     'usr_name' => $data['name'],
 
                     'usr_level' => '1',
-                    'usr_hash' => $hash);
+                    'password' => $hash);
                 if ($this->db->insert('users', $user_data)) {
                     $data['id'] = $this->db->insert_id();
                     // Send email with password???

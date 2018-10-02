@@ -44,10 +44,10 @@ class Admin extends MY_Controller
 					$this->load->library('encrypt');
 
 					// Generate hash from a their password
-					$hash = sha1($usr_password);
+					$hash = sha1($password);
 
 					// Compare the generated hash with that in the database
-					if ($hash != $row->usr_hash) {
+					if ($hash != $row->password) {
 						// Didn't match so send back to login
 
 						$page_data['login_fail'] = true;
@@ -57,8 +57,8 @@ class Admin extends MY_Controller
 						$this->load->view('common/footer');
 					} else {
 						$data = array(
-							'usr_id' => $row->usr_id,
-							'usr_email' => $row->usr_email,
+							'usr_id' => $row->id,
+							'usr_email' => $row->email,
 							'logged_in' => TRUE
 						);
 
